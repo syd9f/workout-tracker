@@ -1,0 +1,58 @@
+nav {
+    border: 3px solid red;
+}
+
+body {
+    background-image: url("../images/liftguy.jpg");
+    background-color: aqua;
+}
+
+#signup {
+    border: 3px solid red;
+    background-color: chocolate;
+}
+
+#login {
+    border: 3px solid red;
+    background-color: darkorange;
+}
+
+footer {
+    border: 3px solid red;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.btn {
+    text-align: center;
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    margin: 0;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    border: 1px solid transparent;
+    outline: none;
+    color: #1a1a1a;
+    background-color: #aeaeae;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  }
+
+  .btn:hover {
+    background-color: rgb(241, 166, 241);
+  }
+
+  form {
+    width: 100%;
+  }
+
+  /* .form-group {
+
+  } */

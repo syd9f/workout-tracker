@@ -3,29 +3,31 @@
     <head>
         <meta charset="UTF-8">
         <title>LiftLog</title>
-        <link rel="stylesheet" href="/css/jass.css">
+        <link rel="stylesheet" href="/css/style.css">
     </head>
 <body>
   <header>
     <nav>
       <!-- TODO: Logo -->
       <h1>LiftLog</h1>
-        <ul>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
-          {{#if loggedIn}}
-          <button id="logout">Logout</button>
-          {{else}}
-          <a href="/login">Login</a>
-          {{/if}}
     </nav>
   </header>
   <main>
     {{{ body }}}
   </main>
   {{#if loggedIn}}
-  <script src="../../public/js/logout.js"></script>
+  <script src="/js/logout.js"></script>
   {{/if}}
+  <footer>
+    <ul>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+    {{#if loggedIn}}
+    <button id="logout">Logout</button>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
+  </footer>
 </body>
 </html>
