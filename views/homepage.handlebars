@@ -10,9 +10,36 @@
 
 <section>
     <h2>Scheduled Exercises</h2>
-    {{!-- Add a scroll list with sections that display Date, Time, and exercise title with a button to mark complete --}}
+    <button>Add to Schedule</button>
+    {{!-- Add a scroll list with sections that display Date, Time, and exercise title with a button to mark complete for each scheduled exercise--}}
+    {{#each scheduledExercise as |scheduledExercise| }}
+    <div class="sched">
+      <div>
+        <h3>{{scheduledExercise.date}}</h3>
+      </div>
+      <div>
+        <h3>{{scheduledExercise.time}}</h4>
+        <h4>{{scheduledExercise.duration}}</h4>
+      </div>
+      <div>
+      <h3>{{scheduledExercise.title}}</h3>
+      </div>
+      <div>
+      <button>Mark as Complete</button>
+      </div>
+    </div>
+    {{/each}}
 </section>
 
 <section>
     <h2>Goals</h2>
+    <button>Set a Goal</button>
+    {{#each goal as |goal| }}
+    <div>
+        <h3>{{goal.goal}}</h3>
+    </div>
+    <div>
+      <button>Mark as Complete</button>
+    </div>
+    {{/each}}
 </section>
