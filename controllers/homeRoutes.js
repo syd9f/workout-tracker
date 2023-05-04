@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
   const users = userData.map((project) => project.get({ plain: true }));
 
   // Pass serialized data into Handlebars.js template
-  res.render('homepage', { users });
+  res.render('login', { users });
 });
 
 module.exports = router;
