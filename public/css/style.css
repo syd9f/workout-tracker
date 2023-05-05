@@ -1,5 +1,8 @@
 nav {
-    border: 3px solid red;
+    border: 1px solid;
+    background-color: #022a29;
+    margin: 10px 7px 7px 7px;
+    box-shadow:0 0 15px 4px #439291;
 }
 
 body {
@@ -8,26 +11,25 @@ body {
 }
 
 #signup {
-    border: 3px solid red;
-    background-color: chocolate;
+    background-color: rgb(255, 115, 0);
+    box-shadow:0 0 15px 4px rgb(218, 181, 165);
 }
 
 #login {
-    border: 3px solid red;
-    background-color: darkorange;
+    background-color: rgb(255, 115, 0);
+    box-shadow:0 0 15px 4px rgb(242, 136, 91);
 }
 
 footer {
-    border: 3px solid red;
+    border: 0.2px solid;
+    background-color: #022a29;
+    margin: 7px 7px 7px 7px;
+    text-align: center;
+    box-shadow:0 0 15px 4px #439291;
 }
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
-    margin-left: -15px;
-    margin-right: -15px;
+.footer h2 {
+    font-size: 20px;
+    color:white;
 }
 
 .btn {
@@ -49,10 +51,107 @@ footer {
     background-color: rgb(241, 166, 241);
   }
 
+  body {
+    margin: 0;
+  }
+
+  main {
+    display: block;
+  }
+
+  h1 {
+    font-size: 3.5em;
+    margin: 0.67em 0;
+    color: white;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    color: white;
+  }
+
+  h3 {
+    font-size: 1rem;
+    color: white;
+  }
+
+  p {
+  font-size: 1.1rem;
+  margin: 0 0 1rem;
+  line-height: 1.5;
+  }
+
   form {
     width: 100%;
   }
+  
+  form .form-group {
+    display: block;
+    width: 100%;
+    margin: 0.625rem 0;
+  }
+  
+  form .form-input,
+  form .form-textarea {
+    display: block;
+  }
 
-  /* .form-group {
+form label,
+form .form-label {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0.625rem 0 0.25rem 0.3rem;
+}
 
-  } */
+form .form-input.form-input-squared {
+    border-radius: 0;
+  }
+  
+  form [type='checkbox'],
+  form [type='radio'] {
+    display: inline-block;
+  }
+  
+  label form [type='checkbox'], label
+  form [type='radio'] {
+    display: inline-block;
+  }
+
+  label {
+    display: inline-block;
+  }
+
+/* Aligns login and signup forms on screen */
+  [class*='col-'] {
+    position: relative;
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: rgb(255, 115, 0);
+    text-decoration: underline;
+  }
+  
+  
