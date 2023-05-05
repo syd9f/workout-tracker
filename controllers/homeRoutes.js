@@ -14,6 +14,7 @@ router.get('/', async (req, res) => {
 
   // Pass serialized data into Handlebars.js template
   res.render('login', { users });
+  
 });
 
 module.exports = router;
