@@ -62,6 +62,7 @@ body {
 
 .right-col {
   justify-content: right;
+  width: 50%;
 }
 
 footer {
