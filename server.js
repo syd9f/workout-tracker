@@ -22,7 +22,7 @@ const sess = {
       db: sequelize,
     }),
   };
-
+  app.use(session(sess));
 
 const hbs = exphbs.create({ helpers });
 

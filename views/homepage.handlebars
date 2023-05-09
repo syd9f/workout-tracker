@@ -1,9 +1,9 @@
 {{!-- profile page content --}}
+<div class="left-col">
+<div id="welcome"><h2>Welcome, {{user.name}}!</h2></div>
 
-<h2>Welcome, {{user.name}}!</h2>
-
-<section>
-    <h2>Accomplishments</h2>
+<section  id="accomplishments">
+  <div><h2>Accomplishments</h2></div>
     <ul>
         <li>Exercises Completed: </li>
         <li>Goals Met: </li>
@@ -11,7 +11,21 @@
     </ul>
 </section>
 
-<section>
+<section id="goals">
+    <h2>Goals</h2>
+    <button>Set a Goal</button>
+    {{#each goal as |goal| }}
+    <div>
+        <h3>{{goal.goal}}</h3>
+    </div>
+    <div>
+      <button>Mark as Complete</button>
+    </div>
+    {{/each}}
+</section>
+</div>
+<div class="right-col">
+<section id="exercises">
     <h2>Scheduled Exercises</h2>
     <button>Add to Schedule</button>
     {{!-- Add a scroll list with sections that display Date, Time, and exercise title with a button to mark complete for each scheduled exercise--}}
@@ -33,16 +47,4 @@
     </div>
     {{/each}}
 </section>
-
-<section>
-    <h2>Goals</h2>
-    <button>Set a Goal</button>
-    {{#each goal as |goal| }}
-    <div>
-        <h3>{{goal.goal}}</h3>
-    </div>
-    <div>
-      <button>Mark as Complete</button>
-    </div>
-    {{/each}}
-</section>
+</div>
