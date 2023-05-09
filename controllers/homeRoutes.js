@@ -14,9 +14,20 @@ router.get('/', withAuth, async (req, res) => {
     console.log(userData);
     const user = userData.get({ plain: true });
 
+
+const response = await fetch('https://musclewiki.p.rapidapi.com/exercises', {
+  headers: {
+    'X-RapidAPI-Key': '067ed42315msh5fbe5b9898134e4p129ad5jsn352fe37e50c4',
+		'X-RapidAPI-Host': 'musclewiki.p.rapidapi.com'
+  }
+});
+const workoutData = await response.json();
+
+console.log(workoutData);
     res.render('homepage', {
-      ...user,
-      logged_in: true
+      user,
+      logged_in: true,
+      exercises: workoutData
     });
   // } catch (err) {
   //   res.status(500).json(err);
@@ -31,8 +42,7 @@ router.get('/', withAuth, async (req, res) => {
     }
   
     res.render('login');
-  });
-  
+  });  
 
 
 module.exports = router;
