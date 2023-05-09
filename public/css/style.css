@@ -20,6 +20,50 @@ body {
     box-shadow:0 0 15px 4px rgb(242, 136, 91);
 }
 
+#welcome {
+  background-color: rgb(255, 115, 0);
+  box-shadow:0 0 15px 4px rgb(218, 181, 165);
+  text-align: center;
+}
+
+#accomplishments {
+  background-color: rgb(255, 115, 0);
+  box-shadow:0 0 15px 4px rgb(218, 181, 165);
+  text-align: center;
+  width: 50%;
+}
+/* #accomplishments div {
+  text-align: center;
+} */
+
+#accomplishments ul {
+  background-color:rgb(218, 181, 165);
+  width: 75%;
+  text-align: center;
+}
+
+#exercises {
+  background-color: rgb(255, 115, 0);
+  box-shadow:0 0 15px 4px rgb(218, 181, 165);
+  width: 100%;
+}
+
+#goals {
+  background-color: rgb(255, 115, 0);
+  box-shadow:0 0 15px 4px rgb(218, 181, 165);
+  width: 100%;
+  
+}
+
+.left-col {
+  justify-content: left;
+  width: 50%;
+}
+
+.right-col {
+  justify-content: right;
+}
+
 footer {
     border: 0.2px solid;
     background-color: #022a29;
