@@ -1,28 +1,16 @@
 {{!-- profile page content --}}
-<div class="left-col">
 <div id="welcome"><h2>Welcome, {{user.name}}!</h2></div>
+<div class="home-row">
+<div class="column">
 
-<section  id="accomplishments">
-  <div><h2>Accomplishments</h2></div>
-
-  <form class="form new-accomplishments-form">
-  <div class="form-group">
-    <label for="excercises-completed">Exercises Completed:</label>
-    <input class="form-input" type="text" id="excercises-completed" name="excercises-completed" />
-  </div>
-
-    <div class="form-group">
-    <label for="goals-met">Goals Met:</label>
-    <input class="form-input" type="text" id="goals-met" name="goals-met" />
-  </div>
-
-    <div class="form-group">
-    <label for="calorie-burn">Calories Burnt:</label>
-    <input class="form-input" type="text" id="calorie-burn" name="calorie-burn" />
-  </div>
-  </form>
-  
-</section>
+  <section id="accomplishments">
+    <div><h2>Accomplishments</h2></div>
+     <ul>
+        <li>Exercises Completed: </li>
+        <li>Goals Met: </li>
+        <li>Est. Calories Burnt: </li>
+     </ul>
+  </section>
 
 <section id="goals">
     <h2>Goals</h2>
@@ -37,7 +25,7 @@
     {{/each}}
 </section>
 </div>
-<div class="right-col">
+<div class="column">
 <section id="exercises">
     <h2>Scheduled Exercises</h2>
     <button>Add to Schedule</button>
@@ -60,4 +48,5 @@
     </div>
     {{/each}}
 </section>
+</div>
 </div>
