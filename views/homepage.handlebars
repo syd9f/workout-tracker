@@ -27,25 +27,35 @@
 </div>
 <div class="column">
 <section id="exercises">
+
     <h2>Scheduled Exercises</h2>
-    <button data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Schedule</button>
-    {{#each scheduledExercise as |scheduledExercise| }}
-    <div class="sched">
-      {{!-- <div>
-        <h3>{{scheduledExercise.date}}</h3>
-      </div> --}}
-      {{!-- <div>
-        <h3>{{scheduledExercise.time}}</h4>
-        <h4>{{scheduledExercise.duration}}</h4>
-      </div> --}}
-      <div>
-      <h3 id="exercise-title">{{schedule.title}}</h3>
-      </div>
-      <div>
-      <button id="scheduleButton">Mark as Complete</button>
-      </div>
+
+    <div class="addToSched">
+      <button data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Schedule</button>
     </div>
-    {{/each}}
+    
+    <div class="sched">
+      {{!-- Display data from User's Schedule db--}}
+        {{!-- IMPORTANT: UNCOMMENT  {{#each scheduledExercise as |scheduledExercise| }} --}}
+      {{!-- {{#each scheduledExercise as |scheduledExercise| }} --}}
+      <div class="sched-date">
+        <h3>{{schedule.date}} Tomorrow</h3>
+      </div>
+
+      <div class="sched-time">
+        <h3>{{schedule.time}} 3:00 PM</h4>
+        <h3>{{schedule.duration}} 30 min</h4>
+      </div>
+
+      <div class="sched-title">
+        <h3 id="exercise-title">{{schedule.title}} Go Jogging</h3>
+      </div>
+
+      <div class="sched-complete">
+        <button id="schedule-completeButton">Mark as Complete</button>
+      </div>
+    {{!-- {{/each}} --}}
+    </div>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

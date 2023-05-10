@@ -8,6 +8,10 @@ Schedule.init(
     title: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    complete: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
     }
   },
   {
