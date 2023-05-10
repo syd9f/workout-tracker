@@ -14,44 +14,49 @@
 
 <section id="goals">
     <h2>Goals</h2>
-    <button>Set a Goal</button>
-    {{#each goal as |goal| }}
-    <div>
-        <h3>{{goal.goal}}</h3>
+    <div class="cardbutton-div">
+      <button>Set a Goal</button>
     </div>
-    <div>
-      <button>Mark as Complete</button>
+    <div class="goal">
+    {{!-- {{#each goal as |goal| }} --}}
+      <div class="goal-item">
+        <h3>{{goal.text}} Go running Tomorrow</h3>
+      </div>
+      <div> 
+        <button>Mark as Complete</button>
+      </div>
+    {{!-- {{/each}} --}}
     </div>
-    {{/each}}
 </section>
 </div>
+
 <div class="column">
 <section id="exercises">
 
     <h2>Scheduled Exercises</h2>
 
-    <div class="addToSched">
+    <div class="cardbutton-div">
       <button data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Schedule</button>
     </div>
-    
+
     <div class="sched">
       {{!-- Display data from User's Schedule db--}}
         {{!-- IMPORTANT: UNCOMMENT  {{#each scheduledExercise as |scheduledExercise| }} --}}
       {{!-- {{#each scheduledExercise as |scheduledExercise| }} --}}
-      <div class="sched-date">
+      <div class="sched-section">
         <h3>{{schedule.date}} Tomorrow</h3>
       </div>
 
-      <div class="sched-time">
+      <div class="sched-section">
         <h3>{{schedule.time}} 3:00 PM</h4>
         <h3>{{schedule.duration}} 30 min</h4>
       </div>
 
-      <div class="sched-title">
+      <div class="sched-section">
         <h3 id="exercise-title">{{schedule.title}} Go Jogging</h3>
       </div>
 
-      <div class="sched-complete">
+      <div class="sched-section">
         <button id="schedule-completeButton">Mark as Complete</button>
       </div>
     {{!-- {{/each}} --}}
