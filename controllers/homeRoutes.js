@@ -14,8 +14,16 @@ router.get('/', withAuth, async (req, res) => {
   console.log(userData);
   const user = userData.get({ plain: true });
 
-  //  Find scheduled exercise from session id
-  const scheduleData = await Schedule.findByPk(req.session.ExerciseId);
+  //  Find scheduled exercises
+  const scheduleData = await Schedule.findByPk(req.session.scheduleId, {
+    include: [
+      {
+        model: Schedule,
+        attributes: ['title'],
+      },
+    ],
+  });
+
   console.log(scheduleData);
   const schedule = scheduleData.get({ plain: true });
 

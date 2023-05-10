@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
       );
   
       req.session.save(() => {
-        req.session.exerciseId = dbScheduleData.id
+        req.session.scheduleId = dbScheduleData.id
 
         res.render('homepage', {
           schedule
@@ -33,14 +33,14 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     // try {
-    const dbSchedData = await Schedule.create({
+    const dbScheduleData = await Schedule.create({
     title: req.body.title,
     });
 
     req.session.save(() => {
     req.session.loggedIn = true;
 
-    res.status(200).json(dbSchedData);
+    res.status(200).json(dbScheduleData);
     });
     // } catch (err) {
     //     console.log(err);
