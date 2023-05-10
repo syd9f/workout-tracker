@@ -1,6 +1,7 @@
 // get reqs
 const router = require('express').Router();
 const User = require('../models/User');
+const Schedule = require('../models/Schedule');
 const withAuth = require('../utils/auth');
 
 // Use withAuth middleware to prevent access to route
@@ -13,6 +14,11 @@ router.get('/', withAuth, async (req, res) => {
   console.log(userData);
   const user = userData.get({ plain: true });
 
+  //  Find scheduled exercise from session id
+  const scheduleData = await Schedule.findByPk(req.session.ExerciseId);
+  console.log(scheduleData);
+  const schedule = scheduleData.get({ plain: true });
+
   // get Muscle Wiki API data 
   const response = await fetch('https://musclewiki.p.rapidapi.com/exercises', {
   headers: {
@@ -22,12 +28,13 @@ router.get('/', withAuth, async (req, res) => {
   });
   const workoutData = await response.json();
 
-  console.log(workoutData);
+  // console.log(workoutData);
 
   res.render('homepage', {
     user,
     logged_in: true,
-    exercises: workoutData
+    exercises: workoutData,
+    schedule,
   });
 });
 

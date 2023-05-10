@@ -1,9 +1,35 @@
 const router = require('express').Router();
 const { Schedule } = require('../../models');
 
-// router.post('/schedule', (req, res) => {
+// GET all galleries for homepage
+router.get('/', async (req, res) => {
+    try {
+      const dbScheduleData = await Schedule.findAll({
+        include: [
+          {
+            model: Schedule,
+            attributes: ['title'],
+          },
+        ],
+      });
+  
+      const schedule = dbScheduleData.map((schedule) =>
+       schedule.get({ plain: true })
+      );
+  
+      req.session.save(() => {
+        req.session.exerciseId = dbScheduleData.id
 
-// });
+        res.render('homepage', {
+          schedule
+        });
+      });
+
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
 
 router.post('/', async (req, res) => {
     // try {
