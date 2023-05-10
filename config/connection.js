@@ -14,9 +14,7 @@ if (process.env.JAWSDB_URL) {
     {
       host: 'localhost',
       dialect: 'mysql',
-      app.listen(process.env.PORT || 3001, () => {
-        console.log(`App listening on port ${process.env.PORT || 3001}!`);
-      }
+      port: (process.env.PORT || 3306)
     }
   );
 }
