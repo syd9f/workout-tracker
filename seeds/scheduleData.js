@@ -2,10 +2,16 @@ const { Schedule } = require('../models');
 
 const scheduledata = [
   {
-    title: 'Push Ups',
+    title: 'Seated Twist',
+    complete: false,
   },
   {
-    title: 'Running',
+    title: 'Wild Thing Pose',
+    complete: false,
+  },
+  {
+    title: 'Barbell Curl',
+    complete: false,
   },
 ];
 

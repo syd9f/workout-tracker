@@ -4,48 +4,73 @@
 <div class="column">
 
   <section id="accomplishments">
-    <div><h2>Accomplishments</h2></div>
-     <ul>
-        <li>Exercises Completed: </li>
-        <li>Goals Met: </li>
-        <li>Est. Calories Burnt: </li>
-     </ul>
+    <div class="section-title">
+      <h2>Accomplishments</h2>
+    </div>
+    
+    <div class="accomplishment-divs">
+      <div class="accomp-sections">
+          <h3>Exercises Completed: </h3><br>
+          <h4>0</h4>
+      </div>
+      <div class="accomp-sections">
+          <h3>Goals Met: </h3><br>
+          <h4>0</h4>
+      </div>
+      {{!-- <div class="accomp-sections">
+         <h3>Est. Calories Burnt: </h3>
+         <h4>0</h4>
+      </div> --}}
+    </div>
   </section>
 
 <section id="goals">
     <h2>Goals</h2>
-    <button>Set a Goal</button>
-    {{#each goal as |goal| }}
-    <div>
-        <h3>{{goal.goal}}</h3>
+    <div class="cardbutton-div">
+      <button>Set a Goal</button>
     </div>
-    <div>
-      <button>Mark as Complete</button>
+    <div class="goal">
+    {{!-- {{#each goal as |goal| }} --}}
+      <div class="goal-item">
+        <h3>{{goal.text}} Go running Tomorrow</h3>
+      </div>
+      <div> 
+        <button>Mark as Complete</button>
+      </div>
+    {{!-- {{/each}} --}}
     </div>
-    {{/each}}
 </section>
 </div>
+
 <div class="column">
 <section id="exercises">
+
     <h2>Scheduled Exercises</h2>
-    <button data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Schedule</button>
-    {{#each scheduledExercise as |scheduledExercise| }}
-    <div class="sched">
-      {{!-- <div>
-        <h3>{{scheduledExercise.date}}</h3>
-      </div> --}}
-      <div>
-        <h3>{{scheduledExercise.time}}</h4>
-        <h4>{{scheduledExercise.duration}}</h4>
-      </div>
-      <div>
-      <h3 id="exercise-title"></h3>
-      </div>
-      <div>
-      <button id="scheduleButton">Mark as Complete</button>
-      </div>
+
+    <div class="cardbutton-div">
+      <button data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Schedule</button>
     </div>
-    {{/each}}
+
+    <div class="sched">
+      {{!-- {{#each scheduledExercise as |scheduledExercise| }} --}}
+      <div class="sched-section">
+        <h3>{{schedule.date}} Tomorrow</h3>
+      </div>
+
+      <div class="sched-section">
+        <h3>{{schedule.time}} 3:00 PM</h4>
+        <h3>{{schedule.duration}} 30 min</h4>
+      </div>
+
+      <div class="sched-section">
+        <h3 id="exercise-title">{{schedule.title}} Go Jogging</h3>
+      </div>
+
+      <div class="sched-section">
+        <button id="schedule-completeButton">Mark as Complete</button>
+      </div>
+    {{!-- {{/each}} --}}
+    </div>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -55,8 +80,20 @@
         <h1 class="modal-title fs-5" id="ModalLabel">Schedule an Exercise</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      <div class="modal-date">
+        <h5>Enter a Date: </h5>
+        <input placeholder="Ex: Tomorrow">
+      </div>
+      <div class="modal-date">
+        <h5>Enter a Time: </h5>
+        <input placeholder="Ex: 3:00 PM">
+      </div>
+      <div class="modal-date">
+        <h5>Enter a Duration: </h5>
+        <input placeholder="Ex: 30 min">
+      </div>
+      <h5>Select Exercise: </h5>
       <div class="modal-body">
-        
         {{#each exercises as |exercise|}}
         <button class ="exercise-listbtn">
           {{exercise.exercise_name}}
@@ -65,7 +102,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button id="modal-SaveBtn" type="button" class="btn btn-primary">Save Exercise</button>
+        <button id="modal-SaveBtn" type="button" class="btn btn-primary">Save to Schedule</button>
       </div>
     </div>
   </div>
