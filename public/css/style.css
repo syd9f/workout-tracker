@@ -1,5 +1,6 @@
 nav {
   border: 1px solid;
+  background-image: url("../images/logo.png");
   background-color: #022a29;
   margin: 10px 7px 7px 7px;
   box-shadow:0 0 15px 4px #439291;
