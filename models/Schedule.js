@@ -5,12 +5,6 @@ class Schedule extends Model {}
 
 Schedule.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
     title: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -20,7 +14,7 @@ Schedule.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'workouts',
+    modelName: 'schedule',
   }
 );
 

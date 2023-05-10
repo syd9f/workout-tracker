@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Schedule } = require('../../models');
 
-// GET all galleries for homepage
+// GET whole schedule for homepage
 router.get('/', async (req, res) => {
     try {
       const dbScheduleData = await Schedule.findAll({
@@ -19,12 +19,12 @@ router.get('/', async (req, res) => {
   
       req.session.save(() => {
         req.session.scheduleId = dbScheduleData.id
-
+  
         res.render('homepage', {
           schedule
         });
       });
-
+  
     } catch (err) {
       console.log(err);
       res.status(500).json(err);

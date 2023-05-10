@@ -4,5 +4,5 @@ var exercise_title = document.getElementById('exercise-title')
 console.log(exercise_title)
 
 $("modal-SaveBtn").click(function() {
-  exercise_title.append(selected_exercise.val);
+  exercise_title.append(selected_exercise.value);
 });
