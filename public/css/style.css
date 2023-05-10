@@ -67,6 +67,14 @@ display: flex;
 flex: 50%;
 }
 
+.modal-body button:focus {
+  background-color: green;
+}
+
+#ModalLabel {
+  color: black;
+}
+
 footer {
   border: 0.2px solid;
   background-color: #022a29;
