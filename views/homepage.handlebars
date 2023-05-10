@@ -31,9 +31,9 @@
     <button data-bs-toggle="modal" data-bs-target="#exampleModal">Add to Schedule</button>
     {{#each scheduledExercise as |scheduledExercise| }}
     <div class="sched">
-      <div>
+      {{!-- <div>
         <h3>{{scheduledExercise.date}}</h3>
-      </div>
+      </div> --}}
       <div>
         <h3>{{scheduledExercise.time}}</h4>
         <h4>{{scheduledExercise.duration}}</h4>
