@@ -1,6 +1,6 @@
 # Project 2 - LiftLog
 
-Deployed application: Link coming soon!
+https://workout-tracker-project-2-ll.herokuapp.com/login
 
 ## Description
 
@@ -30,7 +30,16 @@ Through working on this project and building out this application, we were able 
 
 ## Usage
 
-To use this application, you will first need to go onto the site page, which has been deployed with Heroku. From there, you'll be asked to create an account if you are a new user or to login if you're an existing user. After logging in, you are then taken to the homepage of the website, which contains a 'Schedule Exercise' section, an 'Accomplishments' section and a 'Goals' section. You can schedule an exercise by clicking on the "Add to schedule" button, where you'll then be prompted to enter a date, time and duration and then select a workout from the list of exercises. Once a workout has been scheduled it'll appear below the "Add to schedule" button and once you've completed this workout, you can mark it as completed. You also have the option to use the Goals feature which allows you to set a goal and once you've completed your goal, you can mark it as completed and it'll render in the 'Accomplishments' section. 
+To use this application, you will first need to go onto the site page, which has been deployed with Heroku. 
+From there, you'll be asked to create an account if you are a new user or to login if you're an existing user. 
+
+![Login Screenshot](./login.png)
+
+After logging in, you are then taken to the homepage of the website, which contains a 'Schedule Exercise' section, an 'Accomplishments' section and a 'Goals' section. 
+
+![Login Screenshot](./login.png)
+
+You can schedule an exercise by clicking on the "Add to schedule" button, where you'll then be prompted to enter a date, time and duration and then select a workout from the list of exercises. Once a workout has been scheduled it'll appear below the "Add to schedule" button and once you've completed this workout, you can mark it as completed. You also have the option to use the Goals feature which allows you to set a goal and once you've completed your goal, you can mark it as completed and it'll render in the 'Accomplishments' section. 
 
 # License 
 
