@@ -4,26 +4,25 @@ const { User } = require('../../models');
 
 // Login
 router.post('/login', async (req, res) => {
-  console.log("HERE");
+
   try {
-    console.log("HERE");
+
     const dbUserData = await User.findOne({
       where: {
         email: req.body.email,
       },
     });
-    console.log("HERE!!!!!!");
+
     if (!dbUserData) {
       res
         .status(400)
         .json({ message: 'Incorrect email or password. Please try again!' });
       return;
     }
-    console.log("HERE:)");
+
     const validPassword = await dbUserData.checkPassword(req.body.password);
-    console.log("HERE!!!!!!?????");
+
     if (!validPassword) {
-      console.log("here " + req.body.password);
       res
         .status(400)
         .json({ message: 'Incorrect email or password. Please try again!' });
