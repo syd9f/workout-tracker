@@ -5,6 +5,7 @@ const exphbs = require('express-handlebars');
 const sequelize = require('./config/connection');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
+const seedUsers = require('./seeds/userData');
 
 // Create a new sequelize store using the express-session package
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -37,10 +38,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  // Workouts.bulkCreate(workoutsData, {
-  //   individualHooks: true,
-  //   returning: true,
-  // });
+  seedUsers();
     app.listen(PORT, () => console.log(`Now listening at http://localhost:${PORT}`));
   });
 

@@ -38,7 +38,7 @@ router.get('/', withAuth, async (req, res) => {
   });
   const workoutData = await response.json();
 
-  // console.log(workoutData);
+  console.log(workoutData);
 
   res.render('homepage', {
     user,
